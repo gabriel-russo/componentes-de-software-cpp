@@ -7,6 +7,10 @@ Exemplo de Componentes de software usando C++
 
 - O exemplo utiliza um acoplamento forte, onde o componente gerador requer utilizar a interface do componente verificador.
 
+## Diagrama UML
+
+![alt text](diagrama.png)
+
 ## Fontes:
 
 [André Santanché - Curso de Componentes de Software](https://www.youtube.com/playlist?list=PL3JRjVnXiTBa5E3pOnAVzd9gy3pZdif7H)
