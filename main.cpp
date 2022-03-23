@@ -9,8 +9,6 @@ int main() {
 
     IgeraCpf *gerar_cpf = new geraCpf();
 
-    string meu_cpf;
-
     gerar_cpf->connect(verificar_cpf);
 
     gerar_cpf->gerar_cpf();
