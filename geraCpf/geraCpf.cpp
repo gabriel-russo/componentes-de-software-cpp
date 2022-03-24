@@ -6,11 +6,11 @@
 
 using namespace std;
 
-void geraCpf::connect(IvalidaCpf *componente) {
+void geraCpf::connect(IvalidaCpf *componente) { // Função de Acoplamento com o comp. valida
     this->valida = componente;
 }
 
-void geraCpf::gerar_cpf() {
+void geraCpf::gerar_cpf() { // Gera um CPF e usa o componente valida para validar
     string cpf;
 
     srand(time(0));  // Initialize random number generator.
@@ -29,12 +29,12 @@ void geraCpf::gerar_cpf() {
 
     if(this->valida != nullptr) {
         if (this->valida->validar(&cpf)) {
-            cout << "O CPF GERADO " << cpf << " EH VALIDO" << " ";
+            cout << "O CPF GERADO " << cpf << " É VALIDO" << " ";
         } else {
-            cout << "CPF "<< cpf << " EH INVALIDO" << " ";
+            cout << " O CPF GERADO "<< cpf << " É INVALIDO" << " ";
         }
     }else{
-        cout << "Interface do Componente de validacao nao conectada!" << "\n";
+        cout << "Interface do Componente validaCpf não está conectada!" << "\n";
     }
 }
 

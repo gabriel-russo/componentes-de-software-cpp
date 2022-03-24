@@ -7,7 +7,7 @@ using namespace std;
 #define COMPONENTES_GERACPF_H
 
 
-class IRgeraCpf{
+class IRgeraCpf{ // Interface que irá se conectar com o componente
 public:
     virtual void connect(IvalidaCpf *valida)=0;
 };

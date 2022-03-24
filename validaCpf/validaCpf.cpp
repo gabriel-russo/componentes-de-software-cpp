@@ -4,22 +4,22 @@
 
 using namespace std;
 
-int validaCpf::valorDigito(int somatoria) {
+int validaCpf::valorDigito(int RestoSomatoria) {
     int digito = 0;
 
-    if (somatoria <= 1) {// se for 1 ou 0 ...
+    if (RestoSomatoria <= 1) {// se for 1 ou 0 ...
         digito = 0;
     } else { // se for 2, 3, 4, 5, 6, 7, 8, 9 ou 10
-        digito = 11 - somatoria;
+        digito = 11 - RestoSomatoria;
     }
 
     return digito;
 }
 
-bool validaCpf::validar(string *cpf) {// 052 658 683 48
+bool validaCpf::validar(string *cpf) {
     int multiplicador = 10; // Multiplicador de algarismos
     int digitoJ = -1; // Variavel para guardar o digito verificador J ao final
-    int digitoK = -1; // Variavel para guardar o digito verificador J ao final
+    int digitoK = -1; // Variavel para guardar o digito verificador K ao final
     int somatoriaJ = 0; // Variavel para guardar a soma para verificar o J
     int somatoriaK = 0; // Variavel para guardar a soma para verificar o K
     for (char &ch: *cpf) {
