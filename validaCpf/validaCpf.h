@@ -10,10 +10,10 @@ public:
     virtual bool validar(string *cpf)=0;
 };
 
-
 class validaCpf: public IvalidaCpf {
 public:
     bool validar(string *cpf) override;
+    static int valorDigito(int somatoria);
 };
 
 #endif

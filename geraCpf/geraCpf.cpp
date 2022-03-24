@@ -11,8 +11,8 @@ void geraCpf::connect(IvalidaCpf *componente) {
 }
 
 void geraCpf::gerar_cpf() {
-    string cpf = "";
-    // 052.658.683-48
+    string cpf;
+
     srand(time(0));  // Initialize random number generator.
     for(int i=0;i<14;i++) {
         if (i == 3 || i == 7) {
@@ -25,15 +25,16 @@ void geraCpf::gerar_cpf() {
             }
         }
     }
-    cout << "CPF GERADO: " << cpf << "\n";
+    cout << "UM CPF FOI GERADO: " << cpf << "\n";
+
     if(this->valida != nullptr) {
-        if (valida->validar(&cpf)) {
-            cout << "O CPF " << cpf << " GERADO EH VALIDO" << " ";
+        if (this->valida->validar(&cpf)) {
+            cout << "O CPF GERADO " << cpf << " EH VALIDO" << " ";
         } else {
-            cout << "CPF INVALIDO" << " ";
+            cout << "CPF "<< cpf << " EH INVALIDO" << " ";
         }
     }else{
-        cout << "interface de validacao nao conectada!" << "\n";
+        cout << "Interface do Componente de validacao nao conectada!" << "\n";
     }
 }
 
